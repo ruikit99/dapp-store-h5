@@ -1,0 +1,12 @@
+.btn-color(@bg:@color-btn-bg) {
+  background-color: @bg;
+  @lightness: lightness(@bg);
+  &.active,
+  &:active {
+    background-color: if(
+      (@lightness > 60%),
+      darken(@bg, 15%, relative),
+      lighten(@bg, 15%, relative)
+    );
+  }
+}

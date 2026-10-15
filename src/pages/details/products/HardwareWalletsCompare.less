@@ -1,0 +1,562 @@
+.hw-compare-root .hwCompare, .hw-compare-root .fiexdBtnBox {
+  --hw-compare-max-width: 1200px;
+  --hw-purple: #5D2DE2;
+  --hw-purple-light: rgba(74, 33, 239, 0.1);
+  --hw-green-light: rgba(121, 239, 189, 0.1);
+  --hw-pill-active-green: #79EFBD;
+  max-width: var(--hw-compare-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+.hw-compare-root .fiexdBtnBox {
+  background: #F5F7F9;
+}
+.hw-compare-root .hwCompare .hwExploreHeader {
+  max-width: 1036px;
+  margin: 0 auto 30px;
+}
+.hw-compare-root .hwCompare .hwExploreTitle {
+  color: #000;
+  font-weight: 700 !important;
+  font-size: 48px !important;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-align: center;
+  margin: 0;
+}
+.hw-compare-root .hwCompare .hwExploreDesc {
+  color: #000;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -2%;
+  text-align: center;
+  margin: 20px 0 0;
+}
+.hw-compare-root .hwCompare .compareTable, .hw-compare-root #fiexdBtn .compareTable {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E4E4E4;
+  overflow: hidden;
+}
+.hw-compare-root .hwCompare .compareRow, .hw-compare-root #fiexdBtn .compareRow {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) repeat(3, 1fr);
+  border-bottom: 1px solid #E4E4E4;
+}
+.hw-compare-root .hwCompare .compareRow:last-child, .hw-compare-root #fiexdBtn .compareRow:last-child {
+  border-bottom: none;
+}
+.hw-compare-root .hwCompare .compareCell, .hw-compare-root #fiexdBtn .compareCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 16px;
+  border-right: 1px solid #E4E4E4;
+  min-height: 72px;
+}
+.hw-compare-root .hwCompare .compareCell:last-child, .hw-compare-root #fiexdBtn .compareCell:last-child {
+  border-right: none;
+}
+.hw-compare-root .hwCompare .compareCell .comparePlatformIconBox {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+}
+.hw-compare-root .hwCompare .compareCell .comparePlatformIconBox.comparePlatformConnection {
+  gap: 5px;
+}
+.hw-compare-root .hwCompare .compareLabelCell {
+  color: #000;
+  padding: 20px 20px 20px 30px;
+}
+.hw-compare-root .hwCompare .compareHeader .compareProductCell, .hw-compare-root #fiexdBtn .compareHeader .compareProductCell {
+  background: #fff;
+  color: #000;
+  padding: 0;
+}
+.hw-compare-root .hwCompare .compareHeader .compareProductCellContent {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: start;
+}
+.hw-compare-root #fiexdBtn .compareHeader .compareProductCell {
+  background: #F5F7F9 !important;
+}
+.hw-compare-root .hwCompare .compareGroup .compareRow:not(.compareGroupTitle) .compareProductCell {
+  color: #000;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -2%;
+  text-align: center;
+  word-break: break-word;
+}
+.hw-compare-root .hwCompare .compareGroupTitle .compareLabelCell {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: start;
+  align-items: flex-start;
+  justify-content: center;
+}
+.hw-compare-root .hwCompare .compareRowLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.hw-compare-root .hwCompare .compareGroup .compareRowLabel img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+.hw-compare-root .hwCompare .compareGroup .compareRowLabel span {
+  display: block;
+  width: 100%;
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -2%;
+  text-align: start;
+  word-break: break-word;
+}
+.hw-compare-root .hwCompare .compareCellValue {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1.35;
+  max-width: 220px;
+}
+.hw-compare-root .hwCompare .compareCheckIcon, .hw-compare-root .hwCompare .comparePlatformIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+.hw-compare-root .hwCompare .comparePlatformIcon {
+  width: 40px;
+  height: 40px;
+}
+.hw-compare-root .hwCompare .compareHeader .imgBox {
+  height: 224px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  width: 100%;
+  background: #F5F7F9;
+}
+.hw-compare-root .hwCompare .compareHeader .imgBox img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+.hw-compare-root .hwCompare .compareHeader .x1ImgBox {
+  padding: 0 40px;
+}
+.hw-compare-root .hwCompare .compareHeader .s1ImgBox img {
+  max-width: 174px;
+}
+.hw-compare-root .hwCompare .compareHeader .x1ImgBox img {
+  max-width: 104px;
+}
+.hw-compare-root .hwCompare .compareHeader .s1proImgBox img {
+  max-width: 182px;
+}
+.hw-compare-root .hwCompare .compareHeader .title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.hw-compare-root .hwCompare .compareHeader .star {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #666;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+.hw-compare-root .hwCompare .compareHeader .compareProductCellContent .priceBox {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+.hw-compare-root .hwCompare .compareHeader .price {
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+}
+.hw-compare-root .hwCompare .compareHeader .tip {
+  color: #CCC;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+.hw-compare-root .hwCompare .compareHeader .btnBox {
+  width: 100%;
+  max-width: 220px;
+}
+.hw-compare-root .hwCompare .compareHeader button, .hw-compare-root #fiexdBtn .compareHeader button {
+  background: #4A21EF;
+  width: auto;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -2%;
+  text-align: center;
+}
+.hw-compare-root #fiexdBtn {
+  position: fixed;
+  left: var(--h5-gutter, 0px);
+  right: var(--h5-gutter, 0px);
+  top: 122px;
+  display: none;
+  z-index: 100;
+}
+.hw-compare-root .fiexdBtnBox {
+  box-sizing: border-box;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+.hw-compare-root #fiexdBtn .compareHeader .compareProductCell {
+  padding: 20px;
+  text-align: start;
+}
+.hw-compare-root #fiexdBtn .compareHeader .title {
+  width: 100%;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-align: start;
+}
+.hw-compare-root #fiexdBtn .compareHeader .priceBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.hw-compare-root #fiexdBtn .compareHeader .price {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: start;
+}
+.hw-compare-root #fiexdBtn .compareHeader .tip {
+  width: 100%;
+  color: #CCC;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: -2%;
+  text-align: start;
+}
+.hw-compare-root #fiexdBtn .compareHeader .btnBox {
+  width: 100%;
+}
+.hw-compare-root .fiexdBtnBox--mobile {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 12px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.hw-compare-root .hwFixedMobileItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+.hw-compare-root .hwFixedMobileItem .title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+}
+.hw-compare-root .hwFixedMobileItem .title span {
+  display: block;
+}
+.hw-compare-root .hwFixedMobileItem .price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+}
+.hw-compare-root .hwFixedMobileItem .addToCartBtn {
+  background: #4A21EF;
+  border: none;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 16px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 140px;
+  line-height: 1.3;
+}
+@media (min-width: 993px) {
+.hw-compare-root .hwCompare--mobile, .hw-compare-root .fiexdBtnBox--mobile {
+    display: none !important;
+  }
+.hw-compare-root .fiexdBtnBox--desktop {
+    display: block;
+  }
+}
+@media (max-width: 992px) {
+.hw-compare-root .hwCompare--desktop, .hw-compare-root .fiexdBtnBox--desktop {
+    display: none !important;
+  }
+.hw-compare-root .hwCompare--mobile {
+    display: block;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+.hw-compare-root .hwCompare--mobile .hwExploreTitle {
+    font-size: 30px !important;
+  }
+.hw-compare-root .hwCompare--mobile .hwExploreDesc {
+    font-size: 18px;
+  }
+.hw-compare-root #fiexdBtn {
+    top: 70px;
+  }
+.hw-compare-root .fiexdBtnBox--mobile {
+    display: grid;
+  }
+}
+.hw-compare-root .hwCompareMobileSelector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.hw-compare-root .hwCompareMobileVs {
+  font-size: 12px;
+  font-weight: 600;
+  color: #999;
+  padding: 0 2px;
+}
+.hw-compare-root .hwComparePill {
+  border: 1px solid #E4E4E4;
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  line-height: 1;
+}
+.hw-compare-root .hwComparePill.is-active.hwComparePill--purple {
+  background: var(--hw-purple);
+  border-color: var(--hw-purple);
+  color: #fff;
+}
+.hw-compare-root .hwComparePill.is-active.hwComparePill--green, .hw-compare-root .hwComparePill.is-active.hwComparePill--neutral {
+  background: var(--hw-pill-active-green);
+  border-color: var(--hw-pill-active-green);
+  color: #000;
+}
+.hw-compare-root .hwComparePill:not(.is-active) {
+  background: #fff;
+  border-color: #E4E4E4;
+  color: #000;
+}
+.hw-compare-root .hwCompareMobileCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+.hw-compare-root .hwCompareMobileCard {
+  /* border-radius: 12px; */
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #E0E0E0
+}
+.hw-compare-root .hwCompareMobileCard--theme-purple {
+  background: var(--hw-purple-light);
+}
+.hw-compare-root .hwCompareMobileCard--theme-green {
+  background: var(--hw-green-light);
+}
+.hw-compare-root .hwCompareMobileCard--theme-neutral {
+  background: rgba(121, 239, 189, 0.1);
+}
+.hw-compare-root .hwCompareMobileCardImg {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  width: 100%;
+}
+.hw-compare-root .hwCompareMobileCardImg img {
+  max-height: 100%;
+  max-width: 80%;
+  width: auto;
+}
+.hw-compare-root .hwCompareMobileCardTitle {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.hw-compare-root .hwCompareMobileCardTitle span {
+  display: block;
+}
+.hw-compare-root .hwCompareMobileCardPrice {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+.hw-compare-root .hwCompareMobileCardBtn {
+  background: #4A21EF;
+  border: none;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 16px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 140px;
+  line-height: 1.3;
+}
+.hw-compare-root .hwCompare--mobile .divider {
+  display: flex;
+  align-items: center;
+  margin: 14px 0;
+  color: #E4E4E4;
+}
+.hw-compare-root .hwCompare--mobile .divider::before, .hw-compare-root .hwCompare--mobile .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #E4E4E4;
+}
+.hw-compare-root .hwCompare--mobile .divider::before {
+  margin-right: 6px;
+}
+.hw-compare-root .hwCompare--mobile .divider::after {
+  margin-left: 6px;
+}
+.hw-compare-root .hwCompare--mobile .divider .content {
+  font-size: 12px;
+  line-height: 1;
+}
+.hw-compare-root .hwCompareMobileRowValues {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.hw-compare-root .hwCompareMobileValue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-align: center;
+  font-size: 12px;
+  color: #000;
+  min-height: 32px;
+}
+.hw-compare-root .hwCompareMobileValue .hwCompareMobileRowLabel {
+  width: 100%;
+  text-align: start;
+  color: #666666;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: -2%;
+  word-break: break-word;
+}
+.hw-compare-root .hwCompareMobileValue .hwCompareMobileValueContent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #000;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -2%;
+  text-align: start;
+}
+.hw-compare-root .hwCompareMobileValue .compareCheckIcon {
+  width: 20px;
+  height: 20px;
+}
+.hw-compare-root .hwCompareMobileValue .comparePlatformIcon {
+  width: 20px;
+  height: 20px;
+}
+.hw-compare-root .hwCompareMobileValue .comparePlatformIconBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+.hw-compare-root .hwCompareMobileValue .comparePlatformIconBox.comparePlatformConnection {
+  flex-direction: row;
+  gap: 4px;
+}
+.hw-compare-root .hwCompareMobileValue .comparePlatformIconBox.comparePlatformConnection span {
+  font-size: 15px;
+  line-height: 1.2;
+}
+.hw-compare-root {
+  .hwCompareFixedBar {
+    z-index: 1000;
+    left: var(--h5-gutter, 0px);
+    right: var(--h5-gutter, 0px);
+  }
+
+  .hwCompareMobileCardImg {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+}

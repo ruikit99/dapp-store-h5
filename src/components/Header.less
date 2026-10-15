@@ -1,0 +1,162 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    left: var(--h5-gutter, 0px);
+    right: var(--h5-gutter, 0px);
+    z-index: 999;
+    background: transparent;
+}
+
+.header-container.header-scrolled {
+    background: #4a21ef;
+}
+
+.header-container-box {
+    padding: 0 16px;
+}
+
+.logo {
+    display: flex;
+    padding: 20px 0;
+}
+
+.logo-light {
+    display: none;
+}
+
+.logo.light .logo-light {
+    display: block;
+}
+
+.logo.light .logo-dark {
+    display: none;
+}
+
+.header-scrolled .logo-light {
+    display: block;
+}
+
+.header-scrolled .logo-dark {
+    display: none;
+}
+
+.other {
+    gap: 8px;
+}
+
+.icon-language {
+    font-size: 0px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon-light {
+    display: none;
+}
+
+.header-scrolled .icon-dark {
+    display: none;
+}
+
+.header-scrolled .icon-light {
+    display: block;
+}
+
+.avatar {
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
+.avatar-white {
+    display: none;
+}
+
+.header-scrolled .avatar-dark {
+    display: none;
+}
+
+.header-scrolled .avatar-white {
+    display: block;
+}
+
+.btn-connect {
+    --background-color: #4a21ef;
+    --text-color: #f7f6ff;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 999px;
+    padding: 5px 10px;
+    border-color: var(--background-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1;
+    height: 27px;
+    span {
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 700;
+    }
+}
+
+.header-scrolled .btn-connect {
+    --background-color: #79efbd;
+    --text-color: #000;
+}
+
+.language-popover {
+    margin: 72px auto 0;
+    width: 343px;
+    max-width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    box-shadow: 0 0 30px rgba(127, 137, 161, .25);
+}
+
+.language-popover .item {
+    border: none;
+    background: transparent;
+    padding: 8px 8px;
+    text-align: start;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    border-radius: 4px;
+    word-break: keep-all;
+}
+
+.language-popover .item::before {
+    content: attr(data-name);
+    color: #9C9BAA;
+    margin-right: 6px;
+}
+
+.language-popover .item.actived {
+    background: #f7f6ff;
+}
+
+.header-menu-popover {
+    --z-index: 1000;
+    --arrow-size: 6px;
+    .adm-popover-inner {
+        border-radius: 4px;
+    }
+    .adm-popover-inner-content {
+        padding: 0;
+    }
+    a.item-link {
+        text-decoration: none;
+        color: inherit;
+    }
+    .item-log-out {
+        cursor: pointer;
+    }
+}

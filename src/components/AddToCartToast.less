@@ -1,0 +1,115 @@
+.add-to-cart-toast {
+  position: fixed;
+  top: 72px;
+  right: calc(var(--h5-gutter, 0px) + 12px);
+  left: calc(var(--h5-gutter, 0px) + 12px);
+  z-index: 1080;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  border-radius: 16px;
+  box-shadow: 0 0 30px 0 #00000026;
+  padding: 16px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.add-to-cart-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.add-to-cart-toast-box {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  max-width: none;
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.add-to-cart-toast .toast-thumb {
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0 6px 6px;
+  background: #f7f7f7;
+  width: 88px;
+  align-self: stretch;
+}
+
+.add-to-cart-toast .toast-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 80px;
+}
+
+.add-to-cart-toast .toast-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+}
+
+.add-to-cart-toast .toast-status {
+  font-size: 16px;
+  line-height: 1;
+  color: #4a21ef;
+  font-weight: 400;
+}
+
+.add-to-cart-toast .toast-name {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.add-to-cart-toast .toast-price {
+  font-size: 16px;
+  line-height: 1;
+  color: #666666;
+}
+
+.add-to-cart-toast .toast-arrow {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  padding-right: 12px;
+}
+
+.add-to-cart-toast .toast-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 430px) {
+  .add-to-cart-toast {
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .add-to-cart-toast .toast-info {
+    padding: 10px;
+  }
+
+  .add-to-cart-toast .toast-thumb {
+    width: 72px;
+  }
+
+  .add-to-cart-toast .toast-thumb img {
+    max-height: 72px;
+  }
+}

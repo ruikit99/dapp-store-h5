@@ -1,0 +1,46 @@
+//noinspection CssInvalidAtRule
+@svg border {
+  height: 2px;
+@rect {
+  fill: var(--color, #e6e6e6);
+  width: 100%;
+  height: 50%;
+}
+}
+
+.f-divide-line(
+  @type: pseudo-element,
+  @direction: bottom,
+  @color: @color-line-gray,
+  @which-ele: after,
+  @width: 1px
+) {
+  //伪元素 可应用scale创造0.5px的线
+  &:@{which-ele} when (@type=pseudo-element) {
+    position: absolute;
+    display: block;
+    content: "";
+      @{direction}: 0;
+    background: @color;
+    & when (@direction =left),
+    (@direction =right) {
+      top: 0;
+      height: 100%;
+      width: @width;
+      transform: scale3d(0.5, 1, 1);
+    }
+    & when (@direction =top),
+    (@direction =bottom) {
+      left: 0;
+      height: @width;
+      width: 100%;
+      transform: scale3d(1, 0.5, 1);
+    }
+  } //border 边框
+  & when (@type =border) {
+    border-style: solid;
+    border-width: 0;
+    border-@{direction}: @width solid @color;
+    border-image: svg(border param(--color @color)) 2 1 stretch;
+  }
+}

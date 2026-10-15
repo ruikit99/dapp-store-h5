@@ -1,0 +1,80 @@
+.cart-box {
+    position: fixed;
+    width: 42px;
+    height: 42px;
+    right: calc(var(--h5-gutter, 0px) + 10px);
+    bottom: calc(37.5%);
+    z-index: 99;
+    .adm-badge-wrapper {
+        font-size: 0px;
+    }
+}
+.adm-badge-bordered {
+    --right: 19px;
+    --top: 8px;
+    .adm-badge-content {
+        font-family: 'Alibaba PuHuiTi';
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+.icon-cart {
+    font-size: 0px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #4A21EF;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+    animation: 2s ease 0s infinite normal none running carty-labs-sticky-button-tada;
+}
+
+.cart-list-popup {
+    padding: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-box {
+    flex: 1;
+    overflow: auto;
+}
+
+.list-item {
+    display: flex;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e1e0ec;
+    align-items: center;
+}
+
+.item-content {
+    flex: 1;
+}
+
+.title-item {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.delete-btn {
+    border: none;
+    background: none;
+    font-size: 24px;
+    color: #9e9cb1;
+    cursor: pointer;
+}
+
+.list-total {
+    padding-top: 12px;
+}
+
+.no-items {
+    text-align: center;
+    color: #9e9cb1;
+    padding: 40px 0;
+}

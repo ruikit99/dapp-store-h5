@@ -1,0 +1,236 @@
+.bundle-content {
+  .bundle-top-title {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+}
+.recommend-bundle-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px 0px;
+  padding: 16px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  .bundle-image {
+    width: 100%;
+    margin-bottom: 16px;
+    text-align: center;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  .bundle-title-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .bundle-title {
+    margin: 0;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1;
+    color: #000000;
+    letter-spacing: -2%;
+  }
+
+  .bundle-free-shipping {
+    flex-shrink: 0;
+    padding: 8px;
+    border-radius: 6px;
+    background: #1EF1B2;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .bundle-price-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 16px;
+
+    .price-now {
+      color: #4A21EF;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .price-old {
+      color: #C3BAE7;
+      font-size: 14px;
+      line-height: 1;
+      text-decoration: line-through;
+    }
+
+    .price-save {
+      color: #4A21EF;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1;
+    }
+  }
+
+  .bundle-chips {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .bundle-chip {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0px;
+    width: auto;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: #F3F4F6;
+    text-align: start;
+    cursor: pointer;
+    padding: 0;
+    appearance: none;
+    -webkit-appearance: none;
+
+    .chip-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 10px 12px;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 400;
+      color: #000000;
+      letter-spacing: -2%;
+    }
+    .chip-label.S1_S1P_X1_CY_LC {
+      padding: 10px !important;
+      font-size: 13px !important;
+      letter-spacing: -3% !important;
+      gap: 1px !important;
+    }
+
+    .chip-plus {
+      color: #000000;
+    }
+
+    .chip-discount {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      flex-shrink: 0;
+      padding: 10px 8px;
+      background: #1EF1B2;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    &.is-active {
+      background: rgba(74, 33, 239, 0.1) !important;
+      border-color: #4A21EF;
+
+      .chip-name {
+        color: #4A21EF;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .bundle-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  .bundle-stepper {
+    flex-shrink: 0;
+
+    .adm-stepper {
+      --border-inner: none;
+      --button-text-color: #000000;
+      --button-background-color: #f1f3f4;
+      --input-background-color: #f1f3f4;
+      --input-font-color: #3a3740;
+      --height: 36px;
+      --input-width: 40px;
+      --button-width: 32px;
+      --button-font-size: 16px;
+      gap: 0;
+      background: transparent;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .adm-stepper-input {
+      font-size: 16px;
+      font-weight: 500;
+      background: transparent;
+      margin: 0;
+      min-width: 2ch;
+      max-width: 6ch;
+      box-sizing: content-box;
+      field-sizing: content;
+      text-align: center;
+      height: 36px;
+      .adm-input-element {
+        font-size: 20px;
+        min-height: 36px;
+      }
+    }
+
+    .adm-stepper-minus,
+    .adm-stepper-plus {
+      background: #F3F4F6;
+    }
+  }
+
+  .bundle-add-btn {
+    min-width: 0;
+
+    .adm-button {
+      width: 100%;
+      background: #4A21EF;
+      border-radius: 100px;
+      height: auto;
+      padding: 12px 24px;
+      border-color: #4A21EF;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1;
+      color: #ffffff;
+      text-transform: none;
+    }
+  }
+  .bundle-image-placeholder {
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 8px;
+  }
+}

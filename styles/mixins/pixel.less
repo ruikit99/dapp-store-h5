@@ -1,0 +1,10 @@
+// use .px2rem(30)[]  output  .4rem
+//这种写法 webstorm vscode 编辑器都会报错...
+.px2rem(@px) {
+  @result: @px / 37.5rem;
+}
+
+//use: .px-to-rem(margin-top,36) output margin-top:0.96re
+.px2rem-mix(@property, @px) {
+  @{property}: @px / 37.5rem;
+}
