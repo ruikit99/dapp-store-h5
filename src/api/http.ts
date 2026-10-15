@@ -19,9 +19,7 @@ let invalidSessionFlow: Promise<void> | null = null
 
 let recoverInvalidCartHandler: (() => Promise<any>) | null = null
 
-/** 并发 cartId 失效共用一次静默换新购物车流程 */
 let invalidCartFlow: Promise<void> | null = null
-/** 已处理过的失效 cartId，换新后旧请求迟到的 404 不再重复换新 */
 const handledInvalidCartIds = new Set<string>()
 
 export function setRefreshSessionHandler(handler: (param?: { url?: string }) => Promise<any>) {
@@ -78,7 +76,6 @@ function rejectInvalidSession(payload: any) {
 
 const INVALID_CART_SUPPRESS_MS = 1500
 
-/** 从请求 url 中取 cartId；创建购物车 POST /guest-carts 没有 id，不会进入换新流程 */
 function extractCartIdFromUrl(url?: string) {
   const matched = /(?:guest-carts|getZhe)\/([^/?#]+)/.exec(url || '')
   return matched ? decodeURIComponent(matched[1]) : ''
@@ -93,7 +90,6 @@ function isInvalidCartId(status: number, payload: any, url?: string) {
   )
 }
 
-/** Magento 错误文案带 %fieldName 占位符，用 parameters 替换成实际值 */
 function formatEntityMessage(payload: any) {
   const params = payload?.parameters || {}
   return String(payload?.message || '').replace(/%(\w+)/g, (raw, key) =>
@@ -119,7 +115,6 @@ function rejectInvalidCart(payload: any, url?: string) {
   }
 
   return (invalidCartFlow || Promise.resolve()).then(() => {
-    // cartId 失效静默换新，抑制业务 catch 里的错误 Toast
     setSuppressApiErrorToast(INVALID_CART_SUPPRESS_MS)
     return Promise.reject(error)
   })

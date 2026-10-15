@@ -15,7 +15,6 @@
   @which-ele: after,
   @width: 1px
 ) {
-  //伪元素 可应用scale创造0.5px的线
   &:@{which-ele} when (@type=pseudo-element) {
     position: absolute;
     display: block;
@@ -36,7 +35,7 @@
       width: 100%;
       transform: scale3d(1, 0.5, 1);
     }
-  } //border 边框
+  }
   & when (@type =border) {
     border-style: solid;
     border-width: 0;

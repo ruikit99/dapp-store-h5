@@ -498,7 +498,6 @@ export default function OrderSummaryPage() {
       const addr = JSON.parse(saved) as Record<string, string>
       setShipping(addr)
 
-      // cartId 失效时拦截器已静默换新（新购物车为空），按购物车过期处理
       const list = await getCartsList().catch((error: any) => {
         if (error?.invalidCart) return []
         throw error

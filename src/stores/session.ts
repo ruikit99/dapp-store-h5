@@ -13,7 +13,6 @@ export const useSessionStore = create<SessionState>((set) => ({
   setSessionId: (v) => set({ sessionId: v }),
   persistSessionId: (v) => {
     set({ sessionId: v })
-    // 登录流程已按服务端 expire_time 写入，值相同时不再用默认 1 天覆盖
     if (getStored('session_id') !== v) {
       setStored('session_id', v, { expires: 1 })
     }

@@ -21,7 +21,6 @@ export function setWalletRouteName(name: string) {
   routeName = name
 }
 
-/** 沿用旧 $cookiz 接口供 connectWallet.js 调用，实际读写浏览器存储 */
 const cookiz = {
   get: (key: string) => getStored(key),
   set: (key: string, value: unknown, opts?: { path?: string; maxAge?: number }) => {
